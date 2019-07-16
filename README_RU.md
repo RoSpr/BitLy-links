@@ -17,12 +17,12 @@ ACCESS_TOKEN=
 
 Чтобы запустить скрипт, необходимо выполнить bash-команду, зайдя в директорию с программой через командную строку:
 ```
-python url_shorterer.py your_link
+python main.py your_link
 ```
 
 или, если есть конфликт с Python2:
 ```
-python3 url_shorterer.py your_link
+python3 main.py your_link
 ```
 
 где `your_link` может быть:

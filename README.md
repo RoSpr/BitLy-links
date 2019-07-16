@@ -17,12 +17,12 @@ ACCESS_TOKEN=
 
 To run the script you are to use the following bash command (make sure you have opened the directory with url_shorterer.py in command line):
 ```
-python url_shorterer.py your_link
+python main.py your_link
 ```
 
 or, if there is a conflict with Python2:
 ```
-python3 url_shorterer.py your_link
+python3 main.py your_link
 ```
 
 where `your_link` could be:
