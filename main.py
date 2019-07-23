@@ -81,21 +81,21 @@ def main():
         new_link = cut_http(link)
         try:
             statistics = count_clicks(ACCESS_TOKEN, new_link)
-            return "Количество переходов по ссылке {}: {}".format(new_link, statistics)
+            print("Количество переходов по ссылке {}: {}".format(new_link, statistics))
         except requests.exceptions.HTTPError as error:
-            return "Ошибка: {}".format(error)
+            print("Ошибка: {}".format(error))
 
     if not bitlink_test:
         if link.startswith("http://") or link.startswith("https://"):
             try:
                 bitlink = shorten_the_link(ACCESS_TOKEN, link)
-                return "Сокращённая ссылка: {}".format(bitlink)
+                print("Сокращённая ссылка: {}".format(bitlink))
             except requests.exceptions.HTTPError as error:
-                return "Ошибка: {}".format(error)
+                print("Ошибка: {}".format(error))
 
-    return "Ссылка введена неверно"
+        else:
+            print("Ссылка введена неверно")
 
 
 if __name__ == "__main__":
-    result = main()
-    print(result)
+    main()
